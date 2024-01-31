@@ -8,7 +8,7 @@
     <meta name="description" content="Planetarium" />
     <meta name="keywords" content="A.R.O.N.A" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link rel="icon" href="/A.R.O.N.A.github.io/images/avatar.jpg" />
+    <link rel="icon" href="/images/avatar.jpg" />
     <link rel="preconnect" href="https://cdn.staticfile.org" />
 <script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
 <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
@@ -26,19 +26,21 @@
     rel="stylesheet"
     href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
 />
-<script src="/A.R.O.N.A.github.io/js/lib/highlight.js"></script>
+<script src="/js/lib/highlight.js"></script>
 
 
 
-<script src="/A.R.O.N.A.github.io/js/lib/preview.js"></script>
+<script src="/js/lib/preview.js"></script>
 
 
 
+<script src="/js/lib/search.js"></script>
 
 
-<link rel="stylesheet" href="/A.R.O.N.A.github.io/css/main.css" />
 
-<meta name="generator" content="Hexo 7.1.1"></head>
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
 <body>
     <div id="layout">
         <transition name="fade">
@@ -46,37 +48,37 @@
                 <div id="loading-circle">
                     <h2>LOADING</h2>
                     <p>加载过慢请开启缓存 浏览器默认开启</p>
-                    <img src="/A.R.O.N.A.github.io/images/loading.gif" />
+                    <img src="/images/loading.gif" />
                 </div>
             </div>
         </transition>
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
-        <a class="title" href="/A.R.O.N.A.github.io/">
+        <a class="title" href="/">
             <span>A.R.O.N.A</span>
         </a>
         
-        <a href="/A.R.O.N.A.github.io/">
+        <a href="/">
             <i class="fa-solid fa-house fa-fw"></i>
             <span>&ensp;Home</span>
         </a>
         
-        <a href="/A.R.O.N.A.github.io/about">
+        <a href="/about">
             <i class="fa-solid fa-id-card fa-fw"></i>
             <span>&ensp;About</span>
         </a>
         
-        <a href="/A.R.O.N.A.github.io/archives">
+        <a href="/archives">
             <i class="fa-solid fa-box-archive fa-fw"></i>
             <span>&ensp;Archives</span>
         </a>
         
-        <a href="/A.R.O.N.A.github.io/categories">
+        <a href="/categories">
             <i class="fa-solid fa-bookmark fa-fw"></i>
             <span>&ensp;Categories</span>
         </a>
         
-        <a href="/A.R.O.N.A.github.io/tags">
+        <a href="/tags">
             <i class="fa-solid fa-tags fa-fw"></i>
             <span>&ensp;Tags</span>
         </a>
@@ -90,7 +92,7 @@
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
                 
-                <a href="/A.R.O.N.A.github.io/">
+                <a href="/">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-house fa-fw"></i>
@@ -99,7 +101,7 @@
                     </div>
                 </a>
                 
-                <a href="/A.R.O.N.A.github.io/about">
+                <a href="/about">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-id-card fa-fw"></i>
@@ -108,7 +110,7 @@
                     </div>
                 </a>
                 
-                <a href="/A.R.O.N.A.github.io/archives">
+                <a href="/archives">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-box-archive fa-fw"></i>
@@ -117,7 +119,7 @@
                     </div>
                 </a>
                 
-                <a href="/A.R.O.N.A.github.io/categories">
+                <a href="/categories">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-bookmark fa-fw"></i>
@@ -126,7 +128,7 @@
                     </div>
                 </a>
                 
-                <a href="/A.R.O.N.A.github.io/tags">
+                <a href="/tags">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-tags fa-fw"></i>
@@ -147,17 +149,51 @@
             
 <div id="archives">
     
+    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
+    
     <div id="timeline-wrap" ref="timeline">
         
-        <div class="timeline" data-title="helloworld">
+        <div class="timeline" data-title="普拉娜">
             <div class="timeline-tail"></div>
             <div class="timeline-content">
                 <div class="item-time">2024/1/31</div>
-                <a href="/A.R.O.N.A.github.io/uncategorized/hello-world">
-                    <h3>Hello World</h3>
+                <a href="/2024/01/31/2024-01-31-23-35-41-%E6%99%AE%E6%8B%89%E5%A8%9C/">
+                    <h3>普拉娜</h3>
                 </a>
                 <div class="info">
                     
+                    <span class="category">
+                        <a href="/categories/Game/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            Game
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/Game/" style="color: #00a596">Game</a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/BlueArchive/" style="color: #ff7d73">BlueArchive</a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/%E6%99%AE%E6%8B%89%E5%A8%9C/" style="color: #00bcd4">普拉娜</a>
+                        </span>
+                        
+                    </span>
                     
                 </div>
             </div>
@@ -170,7 +206,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2024 A.R.O.N.A
+            2024 - 2024 A.R.O.N.A
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
@@ -193,7 +229,7 @@
         </transition>
         
     </div>
-    <script src="/A.R.O.N.A.github.io/js/main.js"></script>
+    <script src="/js/main.js"></script>
     
 </body>
 </html>
